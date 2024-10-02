@@ -1,0 +1,16 @@
+@use "../abstract" as *;
+@use "../base/" as *;
+
+.menu {
+  ul {
+    @include between;
+    li {
+      color: $clr--secondary;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+}
