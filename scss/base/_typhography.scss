@@ -1,8 +1,13 @@
 @use "../abstract" as *;
-@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Patrick+Hand&display=swap");
 
-$font--primary: "Patrick Hand", cursive;
-$font--secondary: "Cookie", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Patrick+Hand&display=swap");
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,300);
+
+$font--primary: "Ubuntu", Arial, sans-serif;
+$font--secondary: "Ubuntu Condensed", Arial, sans-serif;
+$font--tertiary: "Raleway", Arial, sans-serif;
 
 html {
   font-size: 62.5%;
