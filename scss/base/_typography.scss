@@ -1,0 +1,29 @@
+@use "../abstract" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Patrick+Hand&display=swap");
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,300);
+
+$font--primary: "Ubuntu", Arial, sans-serif;
+$font--secondary: "Ubuntu Condensed", Arial, sans-serif;
+$font--tertiary: "Raleway", Arial, sans-serif;
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $clr--light;
+  margin-bottom: 2rem;
+}
+p {
+  color: $clr--light;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 2rem;
+}

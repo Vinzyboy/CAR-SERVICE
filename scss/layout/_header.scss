@@ -1,0 +1,69 @@
+@use "../abstract" as *;
+@use "../base/" as *;
+
+.header {
+  position: relative;
+  z-index: 100;
+  background-color: $clr--dark;
+  padding: 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__logo {
+    img {
+    }
+  }
+
+  nav {
+    margin-top: 4.2rem;
+  }
+
+  &__nav {
+    float: right;
+    margin-right: 16px;
+  }
+
+  li {
+    float: left;
+    position: relative;
+    margin: 0 0 0 4px;
+  }
+  li a {
+    display: inline-block;
+    padding: 10px 12px;
+    color: $clr--light;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: $font--primary;
+    background: #26252a;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    &:hover {
+      background: #26252a;
+      -webkit-transition: 0.3s all ease;
+      transition: 0.3s all ease;
+      color: $clr--secondary;
+    }
+    &:hover strong {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  //   .nav-with-ul:after {
+  //     content: "";
+  //     position: absolute;
+  //     width: 5px;
+  //     bottom: 10px;
+  //     left: 50%;
+  //     pointer-events: none;
+  //     z-index: 999;
+  //     width: 0;
+  //     height: 0;
+
+  //   }
+}
