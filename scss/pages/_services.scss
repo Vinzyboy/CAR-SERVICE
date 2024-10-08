@@ -1,0 +1,184 @@
+@use "../abstract" as *;
+@use "../base/" as *;
+
+.services {
+  @include mediaQuery(520px) {
+    .container {
+      padding: 0rem;
+    }
+  }
+
+  &__wrapper {
+    padding: 2rem 5rem;
+    @include mediaQuery(520px) {
+      padding: 3rem;
+    }
+    h2 {
+      font-size: 3rem;
+      font-family: $font-secondary;
+      font-weight: unset;
+      border-bottom: 1px solid rgb(97, 92, 92);
+      border-width: 0.1rem;
+      padding: 1rem;
+      position: relative;
+      padding-top: 4rem;
+      @include mediaQuery(520px) {
+        font-size: 2.5rem;
+      }
+    }
+    .cards {
+      padding: 3rem 0;
+      gap: 2rem;
+      @include mediaQuery(520px) {
+        padding: 2rem 0;
+        gap: 1rem;
+      }
+      .content {
+        @include mediaQuery(520px){
+          max-width: 60rem;
+        }
+        img {
+          width: 25rem;
+          height: 11rem;
+          @include mediaQuery(520px) {
+            width: 20rem;
+            height: 5rem;
+            object-fit: cover;;
+          }
+        }
+        .text {
+          padding-top: 1rem;
+          padding-bottom: 3rem;
+          width: 25rem;
+          font-size: small;
+          line-height: 2rem;
+          @include mediaQuery(520px) {
+            // line-height: 1.5rem;
+            width: 15rem;
+          }
+          a {
+            display: none;
+            @include mediaQuery(520px) {
+              display: inline;
+              color: $clr--light;
+              text-decoration: underline;
+              &:hover {
+                color: $clr--secondary;
+              }
+            }
+          }
+          P {
+            color: $clr--secondary;
+            &:hover {
+              color: $clr--dark;
+            }
+          }
+          .T {
+            color: $clr--light;
+            &:hover {
+              color: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Price {
+  padding-bottom: 2rem;
+  .container {
+    @include mediaQuery(520px) {
+      padding: 0rem;
+    }
+  }
+
+  h2 {
+    font-weight: 200;
+    color: $clr--dark;
+    font-size: 2.5rem;
+    border-bottom: 1px solid rgb(207, 196, 196);
+    border-width: 0.1rem;
+    padding-bottom: 1rem;
+  }
+  &__left {
+    a {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 13px;
+      color: $clr--secondary;
+      font-family: $font-primary;
+      display: block;
+      line-height: 1rem;
+      &::after {
+        display: inline-block;
+        position: relative;
+        content: " ";
+        width: 23rem;
+        top: 0.7rem;
+        height: 1px;
+        opacity: 0.3;
+        background-color: #89888c;
+      }
+
+      &:hover {
+        color: $clr--dark;
+      }
+    }
+  }
+  &__right {
+    a {
+      margin-top: 0.8rem;
+      font-size: 13px;
+      color: $clr--dark;
+      font-family: $font-primary;
+      display: block;
+      line-height: 1rem;
+      padding-top: 0.2rem;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+    p {
+      width: 50rem;
+      text-align: justify;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    color: $clr--dark;
+    padding-top: 1rem;
+  }
+  &__wrapper {
+    padding: 6rem 7rem;
+    background-color: $clr--light;
+    @include unevenGrid(1fr 2fr, 2rem);
+  }
+  &__lists {
+    margin-right: 5rem;
+    display: flex;
+    gap: 5rem;
+    color: $clr--dark;
+    em {
+      background: url(../../IMG/ellipsis.png) repeat-x 0% 13px;
+      display: block;
+      overflow: hidden;
+    }
+    a {
+      font-size: 15px;
+      width: 12.8rem;
+      float: left;
+      font-family: $clr--secondary;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+  }
+  &__col {
+    margin-top: 1rem;
+    ul li {
+      padding-bottom: 1rem;
+    }
+  }
+}
