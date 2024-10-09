@@ -1,0 +1,53 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.tns-outer {
+  overflow: hidden;
+  max-width: 100%;
+
+  & > button {
+    display: none;
+  }
+}
+
+.tns-nav {
+  text-align: center;
+  display: none;
+  button {
+    margin: 2rem 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: none;
+  }
+  &-active {
+    background-color: $clr--secondary;
+  }
+}
+
+#controls {
+  position: absolute;
+}
+
+.prev {
+  padding: 0.8rem;
+  border-radius: 50%;
+  position: relative;
+  color: $clr--secondary;
+  font-size: 0.7rem;
+  bottom: 59rem;
+  left: 78rem;
+  background-color: $clr--light;
+  &:hover {
+    background-color: $clr--dark;
+  }
+  @include mediaQuery(520px) {
+    bottom: 52rem;
+    left: 24rem;
+  }
+}
+
+.next {
+  @extend .prev;
+  right: 70rem;
+}
