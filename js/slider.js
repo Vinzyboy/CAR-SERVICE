@@ -12,11 +12,11 @@ var slider = tns({
   responsive: {
     1250: {
       items: 3,
-      // gutter:100,
+      gutter:100,
     },
     200: {
       items: 2,
-      gutter:25,
+      gutter:40,
     },
   },
 });
