@@ -1,44 +1,60 @@
 @use "../abstract" as *;
 @use "../base/" as *;
 
-.tns-outer {
+.banner .tns-outer {
   overflow: hidden;
   max-width: 100rem;
+
+  img {
+    width: 100%;
+  }
 
   & > button {
     display: none;
   }
 }
 
-.tns-nav {
+.banner .tns-nav {
   text-align: center;
+  position: absolute;
+  z-index: 0;
+
+  right: 400px;
+  bottom: 80px;
+
   button {
     margin: 2rem 0.5rem;
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
     border: none;
-  }
-  &-active {
-    background-color: $clr--secondary;
+    background-color: $clr--light;
+
+    &.tns-nav-active {
+      background-color: $clr--dark;
+    }
   }
 }
 
-#controls {
-  position: absolute;
+/* Responsive adjustments for the slider */
+@media (max-width: 520px) {
+  .banner .tns-outer {
+    max-width: 100%;
+  }
 
-  .prev {
-    color: $clr--light;
-    font-size: 2rem;
-    position: relative;
-    bottom: 16rem;
-    right: 6rem;
-    @include mediaQuery(520px) {
-      display: none;
+  .banner .tns-nav {
+    bottom: 70px;
+    right: 30%;
+    transform: translateX(50%);
+    
+    button {
+      margin: 0 0.2rem;
+      width: 0.4rem;
+      height: 0.4rem;
     }
   }
-  .next {
-    @extend .prev;
-    right: 80rem;
+
+  .banner .tns-nav button.tns-nav-active {
+    background-color: $clr--primary;
   }
 }
