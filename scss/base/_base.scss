@@ -1,10 +1,9 @@
 @use "../abstract/" as *;
-@use "./typhography" as *;
+@use "./typography" as *;
 
 body {
-  background-color: $clr--dark;
-  font-family: $font-primary;
   color: $clr--light;
+  font-family: $font--primary;
   font-size: 2rem;
   overflow-x: hidden;
   line-height: 1.4;
@@ -69,7 +68,7 @@ thead,
 tr,
 th,
 td {
-  font-family: $font-primary;
+  font-family: $font--primary;
   border: 0;
   font-size: 100%;
   margin: 0;
@@ -97,10 +96,10 @@ time {
 a {
   text-decoration: none;
 }
-// img {
-//   max-width: 100%;
-//   width: 100%;
-// }
+img {
+  max-width: 100%;
+  width: 100%;
+}
 
 .container {
   width: 100%;

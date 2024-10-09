@@ -1,13 +1,14 @@
-@use "../abstract/" as *;
+@use "../abstract" as *;
 @use "../base/" as *;
 
-.title{
-    align-items: start;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    h2{
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        font-family: $font-secondary;
-    }
+.title {
+  @include between;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: $font--secondary;
+  }
 }
